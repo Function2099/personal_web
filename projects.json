@@ -1,0 +1,26 @@
+[
+  {
+    "title": "樂透亂數產生器",
+    "img": "./assets/img/lottery.jpg",
+    "desc": "隨機產生號碼。",
+    "tags": ["Java"]
+  },
+  {
+    "title": "代辦事項",
+    "img": "./assets/img/todolist.jpg",
+    "desc": "簡潔 UI，支援新增、刪除、完成標記。",
+    "tags": ["Java", "SQLite"]
+  },
+  {
+    "title": "音樂播放器與地圖",
+    "img": "./assets/img/musicmap.jpg",
+    "desc": "整合 MediaPlayer 與 Google Maps API。",
+    "tags": ["Java", "Google Maps", "MediaPlayer","SQLite"]
+  },
+  {
+    "title": "2D網頁遊戲",
+    "img": "./assets/img/HTML5_Game.jpg",
+    "desc": "利用Javascript與Phaser3框架打造的類惡魔城遊戲",
+    "tags": ["Javascript", "Phaser3"]
+  }
+]

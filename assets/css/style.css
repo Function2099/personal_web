@@ -75,7 +75,7 @@
     font-size: 20px;
 }
 
-.social-bar{
+.social-bar {
     width: 100%;
     background-color: black;
     justify-content: center;
@@ -83,23 +83,91 @@
     display: flex;
     border-radius: 20px;
     gap: 3rem;
-    padding: 6px ;
+    padding: 6px;
 }
 
 .social-bar a img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;    
-  background-color: #ffffff;
-  padding: 0.5rem;
-  box-sizing: border-box;
-  object-fit: cover;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  display: block;
-  margin: 0 auto;      
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    object-fit: cover;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
 }
 
 .social-bar a img:hover {
     background-color: #dadada;
     transform: scale(1.1);
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide img {
+    width: 80%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #312f32;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.tags {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.tags span {
+    background-color: #e0f7f1;
+    color: #007a66;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    display: inline-block;
+    font-family: 'Noto Sans TC', sans-serif;
 }

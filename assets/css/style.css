@@ -3,15 +3,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f5f5f5;
-    border-bottom: 2px solid #333;
+    background: linear-gradient(to right, #fdfdfd, #f0f0f0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .site-title {
     font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    white-space: nowrap;
+    font-weight: 700;
+    color: #2c2c2c;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    letter-spacing: 1px;
 }
 
 .main-nav ul {
@@ -20,25 +25,26 @@
     margin: 0;
     padding: 0;
     gap: 2rem;
-    margin-right: 4rem;
-    text-align: center;
+    margin-right: 2rem;
 }
 
 .main-nav li a {
+    font-size: 1.25rem;
+    font-weight: 500;
     font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    font-size: 1.5rem;
-    display: flex;
-    line-height: 1.5;
-    vertical-align: middle;
-    align-items: center;
-    justify-content: center;
+    color: #444;
     text-decoration: none;
-    color: black;
-    height: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.main-nav li a:hover {
+    background-color: #e0e0e0;
+    color: #000000;
 }
 
 .main-nav li a:active {
-    color: red;
+    color: #d33;
 }
 
 .profile-section {
@@ -46,6 +52,7 @@
     padding: 2rem;
     gap: 2rem;
     align-items: flex-start;
+    margin-top: 80px;
 }
 
 .avatar {
@@ -109,6 +116,7 @@
     width: 80%;
     margin: 60px auto;
     overflow: hidden;
+    text-align: center;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Noto Sans TC', sans-serif;
@@ -139,14 +147,22 @@ button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #312f32;
-    color: white;
+    background: rgba(0, 0, 0, 0.8);
     border: none;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+    background: #828282;
 }
 
 button.prev {
@@ -156,6 +172,13 @@ button.prev {
 button.next {
     right: 10px;
 }
+
+button svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+}
+
 
 .tags {
     margin-top: 8px;
@@ -171,3 +194,43 @@ button.next {
     display: inline-block;
     font-family: 'Noto Sans TC', sans-serif;
 }
+
+
+/* 藝術作品集 */
+.art-gallery {
+    padding: 40px;
+    text-align: center;
+    background-color: #fdfdfd;
+}
+
+.artworks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.art-card {
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-card img {
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover 效果：微微放大 + 陰影加強 */
+.art-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.art-card:hover img {
+    transform: scale(1.05);
+}
+

@@ -60,3 +60,33 @@ document.addEventListener("DOMContentLoaded", function () {
         startAutoSlide();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("./artworks.json")
+        .then(res => res.json())
+        .then(artworks => {
+            const container = document.querySelector(".artworks");
+
+            artworks.forEach(art => {
+                const card = document.createElement("a");
+                card.href = art.pixivUrl;
+                card.target = "_blank";
+                card.className = "art-card";
+
+                const img = document.createElement("img");
+                img.src = art.img;
+                img.alt = art.title;
+
+                // ✅ 改用 width 控制大小
+                img.style.width = art.width || "200px";
+                img.style.height = "auto";
+
+                // const title = document.createElement("h3");
+                // title.textContent = art.title;
+
+                card.appendChild(img);
+                // card.appendChild(title);
+                container.appendChild(card);
+            });
+        });
+});

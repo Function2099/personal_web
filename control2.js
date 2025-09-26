@@ -102,21 +102,6 @@ function initCarousel() {
             updateSlide();
             startAutoSlide();
         })
-        .catch(error => {
-            console.log("無法載入 projects.json，可能是檔案不存在");
-            // 如果沒有 JSON 檔案，可以添加一些範例內容
-            const exampleSlide = document.createElement("div");
-            exampleSlide.className = "slide";
-            exampleSlide.innerHTML = `
-                <div style="width: 80%; height: 250px; background: #f0f0f0; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #666;">
-                    範例作品圖片
-                </div>
-                <h3>範例程式作品</h3>
-                <p>這是一個範例作品描述，您可以在 projects.json 中添加實際的專案資料。</p>
-                <div class="tags"><span>JavaScript</span><span>CSS</span><span>HTML</span></div>
-            `;
-            track.appendChild(exampleSlide);
-        });
 }
 
 // 藝術作品載入功能
@@ -137,35 +122,25 @@ function initArtGallery() {
                 const img = document.createElement("img");
                 img.src = art.img;
                 img.alt = art.title;
-                img.style.width = art.width || "200px";
-                img.style.height = "auto";
+
+                if (art.orientation === "horizontal") {
+                    img.className = "img-horizontal";
+                } else {
+                    img.className = "img-vertical";
+                }
 
                 card.appendChild(img);
                 container.appendChild(card);
             });
         })
-        .catch(error => {
-            console.log("無法載入 artworks.json，可能是檔案不存在");
-            // 如果沒有 JSON 檔案，可以添加一些範例內容
-            const container = document.querySelector(".artworks");
-            if (container) {
-                for (let i = 1; i <= 6; i++) {
-                    const card = document.createElement("div");
-                    card.className = "art-card";
-                    card.style.cursor = "pointer";
-                    card.innerHTML = `
-                        <div style="width: 200px; height: 250px; background: linear-gradient(45deg, #f0f0f0, #e0e0e0); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #666;">
-                            範例藝術作品 ${i}
-                        </div>
-                    `;
-                    container.appendChild(card);
-                }
-            }
-        });
 }
 
 // 全屏滾動事件處理
 function initFullscreenScroll() {
+    document.querySelector(".artworks")?.addEventListener("wheel", function (e) {
+        e.stopPropagation();
+    }, { passive: false });
+
     // 滾輪事件
     let scrollTimeout;
     document.addEventListener('wheel', function (e) {

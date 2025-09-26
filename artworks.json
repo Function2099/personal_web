@@ -3,18 +3,30 @@
     "title": "貓耳胡桃",
     "pixivUrl": "https://www.pixiv.net/artworks/117614769",
     "img": "./assets/img/我桃.png",
-    "width": "200px"
+    "orientation": "vertical"
   },
   {
     "title": "芙桃貼貼",
     "pixivUrl": "https://www.pixiv.net/artworks/116082424",
     "img": "./assets/img/芙桃.png",
-    "width": "200px"
+    "orientation": "vertical"
   },
   {
     "title": "燼龍蘊紀",
     "pixivUrl": "https://www.pixiv.net/artworks/119194583",
     "img": "./assets/img/燼龍蘊紀.png",
-    "width": "200px"
+    "orientation": "vertical"
+  },
+  {
+    "title": "胡桃生日2025_7_15",
+    "pixivUrl": "https://www.pixiv.net/artworks/132716865",
+    "img": "./assets/img/胡桃生日七月.png",
+    "orientation": "vertical"
+  },
+  {
+    "title": "茜特菈莉",
+    "pixivUrl": "https://www.pixiv.net/artworks/125906138",
+    "img": "./assets/img/茜特菈莉.png",
+    "orientation": "horizontal"
   }
 ]

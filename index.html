@@ -4,88 +4,185 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>睡眠不足</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./control.js"></script>
+    <link rel="stylesheet" href="./assets/css/style2.css" />
+    <script src="./control2.js"></script>
   </head>
   <body>
-    <header>
-      <nav class="main-nav">
-        <div class="site-title">個人網站</div>
-        <ul class="nav-list">
-          <li><a href="">主頁</a></li>
-          <li><a href="">作品集</a></li>
-          <li><a href="">聯絡我</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div
-      style="
-        width: 100%;
-        height: 30px;
-        background-color: black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    ></div>
+    <div class="main-container">
+      <!-- 導航欄 -->
+      <header>
+        <nav class="main-nav">
+          <div class="site-title">個人網站</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#" class="nav-item active" data-section="0">主頁</a>
+            </li>
+            <li><a href="#" class="nav-item" data-section="1">作品集</a></li>
+            <li><a href="#" class="nav-item" data-section="2">藝術創作</a></li>
+            <li><a href="#" class="nav-item" data-section="3">聯絡我</a></li>
+            <li><a href="#" class="nav-item" data-section="4">Blog</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <div class="profile-section">
-      <!-- 左側：大頭照 -->
-      <div class="avatar"></div>
+      <!-- 滾動指示器 -->
+      <div class="scroll-indicator">
+        <div class="scroll-dot active" data-section="0"></div>
+        <div class="scroll-dot" data-section="1"></div>
+        <div class="scroll-dot" data-section="2"></div>
+        <div class="scroll-dot" data-section="3"></div>
+        <div class="scroll-dot" data-section="4"></div>
+      </div>
 
-      <!-- 右側：個人簡介 -->
-      <div class="profile-text">
-        <div class="profile-title">
-          一個喜歡長時間待在電腦前用AI輔助編程實現想法<br />且喜愛藝術創作與玩遊戲的人
-        </div>
-        <div class="social-bar">
-          <!-- GitHub連結 -->
-          <a
-            href="https://github.com/Function2099"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./assets/img/github-logo.png" alt="GitHub" />
-          </a>
-          <!-- Pixiv連結 -->
-          <a
-            href="https://www.pixiv.net/users/30493905"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./assets/img/Pixiv.png" alt="Pixiv" />
-          </a>
-          <!-- Email連結 -->
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=function5239@gmail.com&su=聯絡我&body=您好，我想詢問..."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./assets/img/email.png" alt="Email" />
-          </a>
-        </div>
+      <div class="sections-wrapper" id="sectionsWrapper">
+        <!-- 主頁 -->
+        <section class="section home active" data-section="0">
+          <div class="section-content">
+            <div class="profile-section">
+              <!-- 左側：大頭照 -->
+              <div class="avatar"></div>
+
+              <!-- 右側：個人簡介 -->
+              <div class="profile-text">
+                <div class="profile-title">
+                  一個喜歡長時間待在電腦前用AI輔助編程實現想法<br />且喜愛藝術創作與玩遊戲的人
+                </div>
+                <div class="social-bar">
+                  <!-- GitHub連結 -->
+                  <a
+                    href="https://github.com/Function2099"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./assets/img/github-logo.png" alt="GitHub" />
+                  </a>
+                  <!-- Pixiv連結 -->
+                  <a
+                    href="https://www.pixiv.net/users/30493905"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./assets/img/Pixiv.png" alt="Pixiv" />
+                  </a>
+                  <!-- Email連結 -->
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=function5239@gmail.com&su=聯絡我&body=您好，我想詢問..."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./assets/img/email.png" alt="Email" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 程式作品集 -->
+        <section class="section portfolio" data-section="1">
+          <div class="section-content">
+            <section class="carousel">
+              <h2>程式作品</h2>
+              <div class="carousel-track"></div>
+              <button class="prev" aria-label="上一張">
+                <svg viewBox="0 0 24 24">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
+              </button>
+              <button class="next" aria-label="下一張">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+              </button>
+            </section>
+          </div>
+        </section>
+
+        <!-- 藝術創作 -->
+        <section class="section art" data-section="2">
+          <div class="section-content">
+            <section class="art-gallery">
+              <h2>藝術創作</h2>
+              <div class="artworks"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 聯絡我 -->
+        <section class="section contact" data-section="3">
+          <div class="section-content">
+            <h2>聯絡我</h2>
+            <div class="contact-info">
+              <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p>function5239@gmail.com</p>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=function5239@gmail.com&su=聯絡我&body=您好，我想詢問..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-button"
+                >
+                  立即聯絡
+                </a>
+              </div>
+              <div class="contact-item">
+                <h3>💻 GitHub</h3>
+                <p>查看我的程式碼</p>
+                <a
+                  href="https://github.com/Function2099"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-button"
+                >
+                  前往 GitHub
+                </a>
+              </div>
+              <div class="contact-item">
+                <h3>🎨 Pixiv</h3>
+                <p>欣賞我的藝術作品</p>
+                <a
+                  href="https://www.pixiv.net/users/30493905"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-button"
+                >
+                  前往 Pixiv
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Blog -->
+        <section class="section blog" data-section="4">
+          <div class="section-content">
+            <h2>Blog</h2>
+            <div class="blog-intro">
+              <p>分享我在程式開發、藝術創作和遊戲體驗中的心得與見解</p>
+            </div>
+            <div class="blog-preview">
+              <div class="blog-item">
+                <h3>🤖 AI輔助編程的心得</h3>
+                <p>如何運用AI工具提升開發效率...</p>
+                <span class="blog-date">2025-08-05</span>
+              </div>
+              <div class="blog-item">
+                <h3>🎮 遊戲開發日記</h3>
+                <p>記錄我在遊戲開發過程中的挑戰與突破...</p>
+                <span class="blog-date">2025-08-14</span>
+              </div>
+              <div class="blog-item">
+                <h3>🎨 數位藝術創作</h3>
+                <p>分享我在數位繪畫中的心得...</p>
+                <span class="blog-date">2021-11-24</span>
+              </div>
+            </div>
+            <div class="blog-cta">
+              <button class="blog-button">查看更多文章</button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-
-    <section class="carousel">
-      <h2>程式作品</h2>
-      <div class="carousel-track"></div>
-      <button class="prev" aria-label="上一張">
-        <svg viewBox="0 0 24 24">
-          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-        </svg>
-      </button>
-      <button class="next" aria-label="下一張">
-        <svg viewBox="0 0 24 24">
-          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
-        </svg>
-      </button>
-    </section>
-
-    <section class="art-gallery">
-      <h2>藝術創作</h2>
-      <div class="artworks"></div>
-    </section>
   </body>
 </html>
